@@ -76,7 +76,11 @@
     <div id="coords-display">Koordinaten: –</div>
 </div>
 
-    <div id="slider-label"></div>
+<div id="sidebar">
+
+    <h4>Zeitleiste 400 - 1200</h4>
+    <input type="range" id="time-slider" min="" max="" value="" step="1" style="width:100%;">
+    <div id="slider-label"></div>
 <div style="margin-top:12px;">
     <a href="https://trimalcione.github.io/rom-bilder/" 
        target="_blank" 
@@ -458,7 +462,7 @@ function applySlider() {
 
     let year;
 
-    // 801 steht für "heute"
+    // 1201 steht für "heute"
     if (val === 1201) {
         year = currentYear;
         document.getElementById("slider-label").textContent = "Jahr: heute";
@@ -517,6 +521,7 @@ map.on('click', function(e) {
 </script>
 </body>
 </html>
+
 
 
 
