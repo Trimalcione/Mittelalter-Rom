@@ -430,7 +430,7 @@ points.forEach(p => {
 
 
 // ------------------------------------------------------------
-// 9. Slider (kompakt: -800 bis + 800 + heute)
+// 9. Slider (kompakt: 400 bis 1200 + heute)
 // ------------------------------------------------------------
 function initSlider() {
     const slider = document.getElementById("time-slider");
@@ -438,9 +438,9 @@ function initSlider() {
     // künstliche Skala:
     // -800- = echte Jahre
     // 1601 = "heute"
-    slider.min = -800;
-    slider.max = 801;
-    slider.value = 801;
+    slider.min = 400;
+    slider.max = 1201;
+    slider.value = 1201;
 
     document.getElementById("slider-label").textContent = "Jahr: heute";
 }
@@ -455,7 +455,7 @@ function applySlider() {
     let year;
 
     // 801 steht für "heute"
-    if (val === 801) {
+    if (val === 1201) {
         year = currentYear;
         document.getElementById("slider-label").textContent = "Jahr: heute";
     } else {
@@ -513,4 +513,5 @@ map.on('click', function(e) {
 </script>
 </body>
 </html>
+
 
